@@ -45,7 +45,7 @@ const Layout = ({ children, location }) => {
               { name: 'keywords', content: 'sample, something' },
             ]}
           >
-            <html lang="en" />
+            <html lang="ja" />
           </Helmet>
           {content}
         </>
