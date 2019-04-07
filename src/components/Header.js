@@ -1,24 +1,30 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import foltaIcon from '../images/folta.svg'
+import idCard from '../images/id-card.svg'
+
 const Header = (props) => (
-    <header id="header" style={props.timeout ? {display: 'none'} : {}}>
+    <header id="header" style={props.timeout ? { display: 'none' } : {}}>
         <div className="logo">
-            <span className="icon fa-diamond"></span>
+            <img className="icon" src={foltaIcon} alt="fa-id-card" />
         </div>
         <div className="content">
             <div className="inner">
-                <h1>Portfolio</h1>
-                <p>fully responsive site template designed by <a href="https://html5up.net">HTML5 UP</a> and released<br />
-                for free under the <a href="https://html5up.net/license">Creative Commons</a> license.</p>
+                <h1>Folta's Portfolio</h1>
+                <p>これまでの略歴</p>
+                <p>強み</p>
+                <p>今後の展望</p>
             </div>
+            <ul className="icons">
+                <li><a href="https://twitter.com/Faultun" className="icon fa-twitter"><span className="label">Twitter</span></a></li>
+                <li><a href="https://github.com/folt-a" className="icon fa-github"><span className="label">GitHub</span></a></li>
+            </ul>
         </div>
         <nav>
             <ul>
-                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('intro')}}>Intro</a></li>
-                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('work')}}>Work</a></li>
-                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('about')}}>About</a></li>
-                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('contact')}}>Contact</a></li>
+                <li><a href="javascript:;" onClick={() => { props.onOpenArticle('skill') }}>Skill</a></li>
+                <li><a href="javascript:;" onClick={() => { props.onOpenArticle('work') }}>Work</a></li>
             </ul>
         </nav>
     </header>
